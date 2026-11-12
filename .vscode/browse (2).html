@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Product</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION
+     To be added all the pages here
+    -->
+    <nav>
+      <a href="index.html"><strong>CampusMarket</strong></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Browse</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <!-- This page shows all products listed on the marketplace.
+    It has three main parts: a search bar at the top, a filter 
+    sidebar on the left, and a product grid on the right.
+     Users can search by keyword, filter by category, 
+     and click any product to see its details. -->
+    <main>
+      <h1>Browse Products</h1>
+
+      <!-- Search Bar -->
+      <section id="search">
+        <form action="browse.html" method="GET">
+          <label for="q">Search</label>
+          <input
+            type="text"
+            id="q"
+            name="q"
+            placeholder="Search books, gadgets, notes…"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </section>
+
+      <div id="browse-layout">
+        <!--  filter sidebar
+aside
+│
+├── Heading
+├── Form
+│    ├── Fieldset
+│    │     ├── Legend
+│    │     ├── Checkboxes
+│    │
+│    ├── Submit Button
+│    └── Clear Filter Link 
+
+-----------------------------------------
+-------------------
+| FILTER          |
+|-----------------|
+| Category        |
+| ☑ Books         |
+| ☑ Gadgets       |
+| ☐ Clothing      |
+|                 |
+| [Apply Filter]  |
+| Clear Filter    |
+-------------------
+      -->
+
+        <aside id="filters">
+          <h2>Filter</h2>
+          <form action="browse.html" method="GET">
+            <fieldset>
+              <legend>Category</legend>
+              <label
+                ><input type="checkbox" name="category" value="books" />
+                Books</label
+              >
+              <label
+                ><input type="checkbox" name="category" value="notes" /> Study
+                Notes</label
+              >
+              <label
+                ><input type="checkbox" name="category" value="gadgets" />
+                Gadgets</label
+              >
+              <label
+                ><input type="checkbox" name="category" value="furniture" />
+                Furniture</label
+              >
+              <label
+                ><input type="checkbox" name="category" value="stationery" />
+                Stationery</label
+              >
+              <label
+                ><input type="checkbox" name="category" value="lab" /> Lab
+                Equipment</label
+              >
+              <label
+                ><input type="checkbox" name="category" value="clothing" />
+                Clothing</label
+              >
+              <label
+                ><input type="checkbox" name="category" value="other" />
+                Other</label
+              >
+            </fieldset>
+
+            <button type="submit">Apply Filter</button>
+            <a href="browse.html">Clear Filter</a>
+          </form>
+        </aside>
+
+        <!-- PRODUCT LISTING AREA -->
+        <section id="product-listing">
+          <div id="listing-header">
+            <p>Showing <strong>3</strong> products</p>
+            <form>
+              <label for="sort">Sort by</label>
+              <select id="sort" name="sort">
+                <option value="newest">Newest First</option>
+                <option value="price_asc">Price: Low to High</option>
+                <option value="price_desc">Price: High to Low</option>
+              </select>
+            </form>
+          </div>
+
+          <!-- PRODUCT GRID -->
+          <ul id="product-grid">
+            <li class="product-card">
+              <a href="product-detail.html?id=1">
+                <img src="" alt="Data Structures Book" />
+                <span class="condition condition-used">Used</span>
+                <h3>Data Structures &amp; Algorithms</h3>
+                <p class="category">Books</p>
+                <p class="price">৳ 350</p>
+              </a>
+              <form action="cart.php" method="POST">
+                <input type="hidden" name="product_id" value="1" />
+                <button type="submit">Add to Cart</button>
+              </form>
+            </li>
+
+            <li class="product-card">
+              <a href="product-detail.html?id=2">
+                <img src="" alt="Laptop Stand" />
+                <span class="condition condition-new">New</span>
+                <h3>Laptop Cooling Stand</h3>
+                <p class="category">Gadgets</p>
+                <p class="price">৳ 800</p>
+              </a>
+              <form action="cart.php" method="POST">
+                <input type="hidden" name="product_id" value="2" />
+                <button type="submit">Add to Cart</button>
+              </form>
+            </li>
+
+            <li class="product-card">
+              <a href="product-detail.html?id=3">
+                <img src="" alt="CSE Notes" />
+                <span class="condition condition-used">Used</span>
+                <h3>CSE 3rd Semester Full Notes</h3>
+                <p class="category">Study Notes</p>
+                <p class="price">৳ 120</p>
+              </a>
+              <form action="cart.php" method="POST">
+                <input type="hidden" name="product_id" value="3" />
+                <button type="submit">Add to Cart</button>
+              </form>
+            </li>
+          </ul>
+
+          <!-- PAGINATION -->
+          <nav id="pagination" aria-label="Product pages">
+            <a href="?page=1">1</a>
+            <a href="?page=2">2</a>
+            <a href="?page=3">3</a>
+            <span>Next &raquo;</span>
+          </nav>
+        </section>
+      </div>
+    </main>
+  </body>
+  <footer>
+    <p><strong>© 2026 CampusMarket</strong></p>
+    <p>Developed by Tanzila Afrin Bristy &amp; Asfakur Rohman</p>
+
+    <nav>
+      <!-- when more pages will be created, the links should be added here. -->
+      <a href="index.html">Home</a>
+      <a href="login.html">LogIn</a>
+      <a href="register.html">Registration</a>
+    </nav>
+  </footer>
+</html>

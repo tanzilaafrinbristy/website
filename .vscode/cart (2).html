@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav>
+      <a href="index.html"><strong>CampusMarket</strong></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="browse.html">Browse</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Your Cart</h1>
+
+      <section id="cart">
+        <!-- CART ITEMS TABLE -->
+        <table id="cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Condition</th>
+              <th>Price</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="book.jpg" alt="Book" width="50" />
+                <a href="product-detail.html?id=1"
+                  >Data Structures &amp; Algorithms</a
+                >
+              </td>
+              <td>Books</td>
+              <td>Not Used</td>
+              <td>৳ 350</td>
+              <td>
+                <form action>
+                  <input type="hidden" name="product_id" value="1" />
+                  <button type="submit">Remove</button>
+                </form>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <img src="calculator.webp" alt="Calculator" width="50" />
+                <a href="product-detail.html?id=5"
+                  >Scientific Calculator (Casio)</a
+                >
+              </td>
+              <td>Gadgets</td>
+              <td>Used</td>
+              <td>৳ 600</td>
+              <td>
+                <form action>
+                  <input type="hidden" name="product_id" value="5" />
+                  <button type="submit">Remove</button>
+                </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- ORDER SUMMARY -->
+        <section id="order-summary">
+          <h2>Order Summary</h2>
+          <table>
+            <tr>
+              <td>Subtotal</td>
+              <td>৳ 950</td>
+            </tr>
+            <tr>
+              <td>Platform Commission (5%)</td>
+              <td>৳ 47.50</td>
+            </tr>
+            <tr>
+              <th>Total Payable</th>
+              <th>৳ 997.50</th>
+            </tr>
+          </table>
+          <p>
+            <small
+              >A 5% commission is deducted from both buyer and seller as a
+              platform service fee.</small
+            >
+          </p>
+          <a href="payment.html">Proceed to Payment</a>
+          <a href="browse.html">Continue Shopping</a>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p><strong>© 2026 CampusMarket</strong></p>
+      <p>Developed by Tanzila Afrin Bristy &amp; Asfakur Rohman</p>
+
+      <nav>
+        <!-- when more pages will be created, the links should be added here. -->
+        <a href="index.html">Home</a>
+        <a href="login.html">LogIn</a>
+        <a href="register.html">Registration</a>
+      </nav>
+    </footer>
+  </body>
+</html>

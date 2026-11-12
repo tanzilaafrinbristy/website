@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html"><strong>CampusMarket</strong></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="login">
+        <h1>Log In</h1>
+        <p>Welcome back! Log in to your student account.</p>
+
+        <form>
+          <label for="email">Student Email or ID *</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="e.g. 232311223@vu.edu.bd"
+            required
+          />
+
+          <label for="password">Password *</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+
+          <p><a href="forgot-password.html">Forgot your password?</a></p>
+          <!-- <p style="color: red">Needs to create forget_password.html</p> -->
+          <button type="submit">Log In</button>
+        </form>
+
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+      </section>
+    </main>
+  </body>
+  <footer>
+    <p><strong>© 2026 CampusMarket</strong></p>
+    <p>Developed by Tanzila Afrin Bristy &amp; Asfakur Rohman</p>
+
+    <nav>
+      <!-- when more pages will be created, the links should be added here. -->
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </footer>
+</html>

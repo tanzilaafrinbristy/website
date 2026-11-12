@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html"><strong>CampusMarket</strong></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="register">
+        <h1>Create Your Account</h1>
+        <p>Register with your Student ID to join the marketplace.</p>
+
+        <form>
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="full_name">Full Name *</label>
+            <input
+              type="text"
+              id="full_name"
+              name="full_name"
+              placeholder="Your full name"
+              required
+            />
+
+            <label for="student_id">Student ID *</label>
+            <input
+              type="text"
+              id="student_id"
+              name="student_id"
+              placeholder="e.g. 232311223"
+              required
+            />
+
+            <label for="email">University Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="studentid@vu.edu.bd"
+              required
+            />
+
+            <label for="phone">Phone Number *</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="01XXXXXXXXX"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Account Settings</legend>
+
+            <label for="role">I want to *</label>
+            <select id="role" name="role" required>
+              <option value="">-- Select Role --</option>
+              <option value="buyer">Buy Only</option>
+              <option value="seller">Sell Only</option>
+              <option value="both">Buy &amp; Sell</option>
+            </select>
+
+            <label for="password">Password *</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Minimum 6 characters"
+              required
+              minlength="6"
+            />
+
+            <label for="confirm_password">Confirm Password *</label>
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              placeholder="Repeat your password"
+              required
+            />
+          </fieldset>
+
+          <label>
+            <input type="checkbox" name="terms" />
+            I agree to the Terms and Conditions
+          </label>
+
+          <button type="submit">Create Account</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Log in here</a></p>
+      </section>
+    </main>
+  </body>
+  <footer>
+    <p><strong>© 2026 CampusMarket</strong></p>
+    <p>Developed by Tanzila Afrin Bristy &amp; Asfakur Rohman</p>
+
+    <nav>
+      <!-- when more pages will be created, the links should be added here. -->
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </footer>
+</html>

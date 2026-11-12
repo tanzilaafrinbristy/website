@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav>
+      <a href="index.html"><strong>CampusMarket</strong></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Back to Cart</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1>Complete Payment</h1>
+      <p>Your payment is held securely until delivery is confirmed via OTP.</p>
+
+      <section id="payment">
+        <!-- ORDER AMOUNT SUMMARY -->
+        <section id="payment-summary">
+          <h2>Order Summary</h2>
+          <table>
+            <tr>
+              <td>Subtotal</td>
+              <td>৳ 950</td>
+            </tr>
+            <tr>
+              <td>Platform Commission (5%)</td>
+              <td>৳ 47.50</td>
+            </tr>
+            <tr>
+              <th>Total Payable</th>
+              <th>৳ 997.50</th>
+            </tr>
+          </table>
+        </section>
+
+        <!-- PAYMENT FORM -->
+        <form action="payment.php" method="POST" id="payment-form">
+          <input type="hidden" name="order_id" value="1042" />
+          <input type="hidden" name="total_amount" value="997.50" />
+
+          <fieldset>
+            <legend>Select Payment Method</legend>
+            <label>
+              <input
+                type="radio"
+                name="payment_method"
+                value="bkash"
+                required
+              />
+              📱 bKash
+            </label>
+            <label>
+              <input type="radio" name="payment_method" value="nagad" />
+              🟠 Nagad
+            </label>
+            <label>
+              <input type="radio" name="payment_method" value="bank" />
+              🏦 Bank Transfer
+            </label>
+            <label>
+              <input type="radio" name="payment_method" value="cash" />
+              💵 Cash on Delivery
+            </label>
+          </fieldset>
+
+          <label for="payment_number">Mobile Number / Account *</label>
+          <input
+            type="tel"
+            id="payment_number"
+            name="payment_number"
+            placeholder="01XXXXXXXXX"
+            required
+          />
+
+          <p>
+            <small
+              >A 5% service commission will be deducted from both buyer and
+              seller.</small
+            >
+          </p>
+
+          <button type="submit">Pay Now &mdash; ৳ 997.50</button>
+        </form>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

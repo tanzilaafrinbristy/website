@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm Delivery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav>
+      <a href="index.html"><strong>CampusMarket</strong></a>
+    </nav>
+
+    <main>
+      <section id="otp-verification">
+        <h1>Confirm Delivery</h1>
+        <p>
+          Enter the 6-digit OTP sent to your registered phone number. Payment
+          will be released to the seller only after you confirm delivery.
+        </p>
+
+        <p><strong>Order:</strong> #ORD-1042</p>
+        <p>
+          <strong>Amount to release to seller:</strong> ৳ 902.50 (after 5%
+          commission deduction)
+        </p>
+
+        <!-- OTP FORM -->
+        <form action="otp_verify.php" method="POST" id="otp-form">
+          <input type="hidden" name="order_id" value="1042" />
+
+          <fieldset>
+            <legend>Enter OTP</legend>
+
+            <label for="otp_code">6-Digit OTP Code *</label>
+            <input
+              type="tel"
+              id="otp_code"
+              name="otp_code"
+              placeholder="e.g. 123456"
+              maxlength="6"
+              minlength="6"
+              pattern="[0-9]{6}"
+              required
+              autocomplete="one-time-code"
+            />
+            <p><small>OTP was sent to your phone: 01XXX-XXX789</small></p>
+          </fieldset>
+
+          <button type="submit">Verify &amp; Confirm Delivery</button>
+        </form>
+
+        <!-- RESEND OTP -->
+        <form action="otp_resend.php" method="POST">
+          <input type="hidden" name="order_id" value="1042" />
+          <p>
+            Didn't receive the OTP? <button type="submit">Resend OTP</button>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
